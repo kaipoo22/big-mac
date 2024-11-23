@@ -45,9 +45,16 @@
                 }
             </style>
         <script>
+            function addItem(e) {
+        var newItemToList = document.querySelector("#enter-text").value; // Use 'value' instead of 'innerHTML'
+        var tableSpot = document.querySelector("#row2-col2");
+        tableSpot.innerHTML = newItemToList; // Update the table cell
+}
+            
             var index = 0;
 
             function changeQuote() {
+                
                 var quotes = [
                     `"ka!"`,
                     `"cha`,
@@ -65,5 +72,29 @@
            
             
         </script>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Checkbox</th>
+                        <th>To do</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[  ]</td>
+                        <td>Row 1, Col 2</td>
+                        
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="myCheckbox">></td>
+                        <td id="row2-col2"></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </body>
+
 </html>
